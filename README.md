@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# Anomaly Detection System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is an anomaly detection system that utilizes a Flask backend to process CSV data and detect anomalies using machine learning algorithms. The frontend is built with React to provide an interactive user experience for uploading files and visualizing results.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Upload and Process CSV Files:** Upload CSV files via a Flask API.
+- **Anomaly Detection:** Detect anomalies using the Isolation Forest algorithm.
+- **Data Visualization:** Visualize anomalies with decision boundary plots.
+- **Summary and Insights:** Generate summaries and insights based on detected anomalies.
 
-Runs the app in the development mode.\
-Open [http://localhost:3001](http://localhost:3001) to view it in your browser.
+## Frontend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The frontend is implemented using React. It allows users to upload CSV files and view the results returned by the Flask API.
 
-### `npm test`
+## Backend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The backend is implemented using Flask and includes the following features:
 
-### `npm run build`
+- **CSV Upload Endpoint:** `/api/uploadfile` - Accepts a POST request with a CSV file for anomaly detection.
+- **Anomaly Detection:** Utilizes the Isolation Forest algorithm to identify anomalies.
+- **Plotting:** Generates and returns base64-encoded plots of detected anomalies.
+- **Summary and Insights:** Provides textual summaries and insights based on the anomaly detection results.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository:**
 
-### `npm run eject`
+    ```bash
+    git clone <repository-url>
+    cd <repository-directory>
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Create a virtual environment and install dependencies:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    pip install -r requirements.txt
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Run the Flask app:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    ```bash
+    python app.py
+    ```
 
-## Learn More
+### Frontend
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Navigate to the frontend directory:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ```bash
+    cd <frontend-directory>
+    ```
 
-### Code Splitting
+2. **Install dependencies:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    ```bash
+    npm install
+    ```
 
-### Analyzing the Bundle Size
+3. **Run the React app:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    ```bash
+    npm start
+    ```
 
-### Making a Progressive Web App
+## How to Use
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. **Frontend:**
 
-### Advanced Configuration
+   - Place your CSV files in the designated upload area on the React app.
+   - Submit the files to the Flask backend using the provided upload functionality.
+   - View the results, including summaries, insights, and visualizations.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+2. **Backend:**
 
-### Deployment
+   - **Upload your CSV file** through the API endpoint `/api/uploadfile`.
+   - The backend will process the file, detect anomalies, and return results including:
+     - Anomalies in JSON format.
+     - A summary of the dataset and detected anomalies.
+     - Insights based on the detected anomalies.
+     - Base64-encoded plots for visualization.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Libraries and APIs Used
 
-### `npm run build` fails to minify
+- **Flask**: For building the backend API.
+- **Pandas**: For data manipulation and analysis.
+- **Matplotlib**: For generating plots.
+- **Scikit-Learn**: For implementing the Isolation Forest algorithm.
+- **Flask-CORS**: For handling Cross-Origin Resource Sharing.
+- **React**: For building the frontend application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Credits
+
+This project was developed by [Your Name](https://github.com/your-github-profile).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
