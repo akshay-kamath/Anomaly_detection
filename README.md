@@ -158,5 +158,5 @@ The `detect_anomalies` function processes a CSV or Excel file to detect anomalie
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License
 
