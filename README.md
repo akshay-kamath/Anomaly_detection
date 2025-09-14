@@ -156,7 +156,5 @@ The `detect_anomalies` function processes a CSV or Excel file to detect anomalie
 - **React**: For building the frontend application.
 
 
-## License
 
-This project is licensed under the MIT License
 
