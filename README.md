@@ -154,9 +154,3 @@ The `detect_anomalies` function processes a CSV or Excel file to detect anomalie
 - **Scikit-Learn**: For implementing the Isolation Forest algorithm.
 - **Flask-CORS**: For handling Cross-Origin Resource Sharing.
 - **React**: For building the frontend application.
-
-
-## License
-
-This project is licensed under the MIT License
-
